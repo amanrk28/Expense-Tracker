@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body style="background-color: #222;">
+    <div class="container">
+        <h1 class="text-center text-info font-weight-bolder">EXPENSE TRACKER</h1>
+        <div class="offset-sm-2 row mt-4">
+            <h5 class="col-12">YOUR BALANCE</h5>
+            <h3>&nbsp;&nbsp;&#8377; &nbsp;</h3>
+            <h3 class='font-weight-bold' id="balance"></h3>
+        </div>
+        <div class="row">
+            <div class="inc col-6 col-md-3 offset-md-3 offset-1">
+                <h6>Income</h6>
+                <div class="row">
+                    <h5 class="text-success">&#8377;&nbsp;</h5>
+                    <h5 id="income" class='text-success'></h5>
+                </div>
+            </div>
+            <div class="exp col-5 col-md-3 offset-md-1 ">
+                <h6>Expense</h6>
+                <div class="row">
+                    <h5 class="text-danger">&#8377;&nbsp;</h5>
+                    <h5 id="expense" class='text-danger'></h5>
+                </div>
+            </div>
+        </div>
+
+        <h5 id='trans'>Add New Transaction</h5>
+        <div class="row mb-4 d-flex justify-content-center">
+            <div class="col-md-6 col-10">
+                <p>Purpose</p>
+                <input type="text" class="form-control" id="text" placeholder="Enter text..."><br>
+            </div>
+            <div class="col-md-6 col-10">
+                <div class='row'>
+                    <p>&nbsp;&nbsp;&nbsp;Amount(Income:
+                    <p class="text-success">+ve</p>,Expense: <p class="text-danger">-ve</p>)
+                    </p>
+                </div>
+                <input type="number" class="form-control" id="transaction" placeholder="Enter Amount..."><br>
+            </div>
+            <button class="btn btn-outline-info btn-md-4" id="add">Add Transaction</button>
+        </div>
+        <h5>History</h5>
+        <table class="table table-hover table-sm">
+            <thead>
+                <tr>
+                    <th> Purpose</th>
+                    <th>Amount</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
