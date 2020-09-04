@@ -42,7 +42,10 @@ class Store {
   }
   static updBalance(balance) {
     localStorage.setItem("balance", JSON.stringify(balance));
-  }
+    setTimeout(()=>{
+      location.reload()
+    },1);
+    }
   static removeTracker(el) {
     const tracker = Store.getTracker();
     tracker.forEach((track, index) => {
